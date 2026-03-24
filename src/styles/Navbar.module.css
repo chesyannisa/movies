@@ -1,13 +1,66 @@
+.navbar {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
 .navWrapper {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 10px;
-  background-color: cadetblue;
+  gap: 20px;
 }
+
 .navWrapper a {
-  color: white;
-  font-weight: 700;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+}
+
+.navWrapper a:hover {
+  color: var(--text-main);
+}
+
+.navWrapper a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent);
+  transition: 0.3s;
+}
+
+.navWrapper a:hover::after {
+  width: 100%;
+}
+
+.navWrapper a.active {
+  color: var(--accent);
+}
+
+.welcome {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-right: 10px;
 }
