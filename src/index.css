@@ -63,8 +63,7 @@ button:hover {
   background-color: var(--accent-hover);
 }
 
-/* SCROLLBAR (optional tapi keren) */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -75,4 +74,4 @@ button:hover {
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 10px;
-} */
+}
