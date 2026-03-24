@@ -21,33 +21,22 @@ const MovieDetail = () => {
   const IMG_API = "https://image.tmdb.org/t/p/w1280";
   return (
     <div className={styles.detailWrapper}>
-      <h1>{title}</h1>
-      <div className={styles.bottomWrapper}>
+      <div className={styles.container}>
         <div className={styles.posterWrapper}>
           <img src={IMG_API + poster_path} alt="img" />
         </div>
-        <ul className={styles.ul}>
-          <li>
-            <span>Overview:</span>
-            {overview}
-          </li>
-          <li>
-            <span>Name:</span>
-            {title}
-          </li>
-          <li>
-            <span>IMDB:</span>
-            {vote_average}
-          </li>
-          <li>
-            <span>Vote Count:</span>
-            {vote_count}
-          </li>
-          <li>
-            <span>Date:</span>
-            {release_date}
-          </li>
-        </ul>
+
+        <div className={styles.infoWrapper}>
+          <h1 className={styles.title}>{title}</h1>
+
+          <div className={styles.meta}>
+            <span className={styles.rating}>{vote_average}</span>
+            <span>{vote_count} votes</span>
+            <span>{release_date}</span>
+          </div>
+
+          <p className={styles.overview}>{overview}</p>
+        </div>
       </div>
     </div>
   );
