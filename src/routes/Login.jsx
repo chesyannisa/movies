@@ -20,6 +20,7 @@ const Login = () => {
   return (
     <div className={styles.formWrapper}>
       <form className={styles.form} onSubmit={handleSubmit}>
+        <h2 className={styles.title}>Welcome Back</h2>
         <div className={styles.inputWrapper}>
           <label htmlFor="name">Username</label>
           <input
